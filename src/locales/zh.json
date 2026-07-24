@@ -1,19 +1,27 @@
 {
-"title": "Mezan 律师事务所",
+  "title": "Mezan 律师事务所",
   "subtitle": "Mohamed Eid Abo Lafi | 为埃及公民与外籍人士提供全方位法律支持",
   "about_desc": "Mezan 律师事务所由埃及律师协会注册执业律师 Mohamed Eid Abo Lafi 先生领导，致力于为埃及公民提供稳健的诉讼与法律解决方案，并专精于为在埃外籍人士、国际投资者提供高效安全的外商投资、公司设立及资产登记服务。",
   "about_title": "关于 Mezan 律师事务所",
   "services_title": "法律服务与专业領域",
-  "service1_title": "💍 外籍人士在埃婚姻登记",
-  "service1_desc": "高效办理埃及司法部外籍婚姻全套法定程序、提供认证翻译并申领官方数字化证书，全程严格保密。",
-  "service2_title": "🏢 公司设立与投资（本地及外商）",
-  "service2_desc": "协助埃及与外国投资者设立各类公司、草拟国际与本地商业合同，并全权代理投资总局 (GAFI) 相关事务。",
-  "service3_title": "📍 房地产与产权登记",
-  "service3_desc": "为本地及外籍客户审查房产权属，并在埃及房产登记局 (Shahr Akary) 办理法定登记，确保您的资产投资万无一失。",
-  "service4_title": "⚖️ 埃及公民与外籍人士诉讼代理",
-  "service4_desc": "为所有国籍的个人在埃及各级法院提供刑事、民事法律辩护，并高效处理各类家庭与抚养费案件。",
+
+  "service1_title": "🏢 公司设立与投资（本地及外商）",
+  "service1_desc": "协助埃及与外国投资者设立各类公司、草拟国际与本地商业合同，并全权代理投资总局 (GAFI) 相关事务。",
+
+  "service2_title": "👨‍👩‍👧 家庭法与人身关系案件",
+  "service2_desc": "处理离婚、监护权、抚养费等各类家庭稳定相关事务，为埃及公民及外籍人士提供高度保密和专业的法律服务。",
+
+  "service3_title": "⚖️ 刑事诉讼与法律代理",
+  "service3_desc": "在埃及各级法院为刑事案件提供专业辩护与法律代理，在诉讼的每个阶段保护您的合法权益。",
+
+  "_deferred_marriage_title": "💍 外籍人士在埃婚姻登记",
+  "_deferred_marriage_desc": "高效办理埃及司法部外籍婚姻全套法定程序、提供认证翻译并申领官方数字化证书，全程严格保密。",
+
+  "_deferred_realestate_title": "📍 房地产与产权登记",
+  "_deferred_realestate_desc": "为本地及外籍客户审查房产权属，并在埃及房产登记局 (Shahr Akary) 办理法定登记，确保您的资产投资万无一失。",
+
   "contact_title": "直接联络 Mezan 律师事务所",
-"contact_desc": "我们很高兴为您提供法律咨询，所有正式预约将统一且仅通过 WhatsApp 进行：",
+  "contact_desc": "我们很高兴为您提供法律咨询，所有正式预约将统一且仅通过 WhatsApp 进行：",
   "btn_wa": "通过 WhatsApp 与我们联系",
   "note": "备注：所有预约及客户资料均严格保密，仅限通过 Mezan 官方 WhatsApp 直接渠道沟通。",
   "btn_call": "📞 拨打电话"

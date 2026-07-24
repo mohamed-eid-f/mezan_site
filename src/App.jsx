@@ -15,7 +15,7 @@ function App() {
   return (
     <div style={{ direction: isRtl ? 'rtl' : 'ltr', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       
-      {/* شريط اختيار اللغات العلوي - تم إضافة زر الألمانية (Deutsch) */}
+      {/* شريط اختيار اللغات العلوي */}
       <div style={{ backgroundColor: '#0b1329', padding: '12px 20px', textAlign: 'center', borderBottom: '1px solid #1c2541' }}>
         <button onClick={() => changeLanguage('ar')} style={{ margin: '0 10px', color: i18n.language === 'ar' ? '#d4af37' : '#fff', background: 'none', border: 'none', fontWeight: 'bold', cursor: 'pointer', fontSize: '1rem' }}>العربية</button>
         <button onClick={() => changeLanguage('en')} style={{ margin: '0 10px', color: i18n.language === 'en' ? '#d4af37' : '#fff', background: 'none', border: 'none', fontWeight: 'bold', cursor: 'pointer', fontSize: '1rem' }}>English</button>
@@ -25,7 +25,7 @@ function App() {
         <button onClick={() => changeLanguage('zh')} style={{ margin: '0 10px', color: i18n.language === 'zh' ? '#d4af37' : '#fff', background: 'none', border: 'none', fontWeight: 'bold', cursor: 'pointer', fontSize: '1rem' }}>中文</button>
       </div>
 
- {/* هيدر الموقع - يعرض صورة البانر كاملة دون أي نصوص مكررة */}
+      {/* هيدر الموقع */}
       <header style={{ 
         backgroundColor: '#0b1329', 
         padding: '40px 20px', 
@@ -34,21 +34,18 @@ function App() {
         backgroundImage: 'linear-gradient(135deg, #0b1329 0%, #1c2541 100%)'
       }}>
         <div className="container">
-          
-          {/* عرض صورة البانر بالكامل بحجم ضخم واحترافي */}
           <img 
             src="/logo.png" 
             alt="Mezan Law Firm Banner" 
             style={{ 
-              width: '100%',          /* يمتد ليأخذ المساحة الكاملة المتاحة */
-              maxWidth: '550px',      /* تكبير العرض ليظهر التصميم الداخلي للبانر بوضوح شديد */
-              height: 'auto',         /* الحفاظ على أبعاد الصورة الأصلية دون تمطيط */
+              width: '100%',
+              maxWidth: '550px',
+              height: 'auto',
               objectFit: 'contain',
               display: 'inline-block'
             }}
             onError={(e)=>{e.target.style.display='none'}} 
           />
-
         </div>
       </header>
 
@@ -65,21 +62,41 @@ function App() {
           </p>
         </section>
 
-        {/* مجالات التخصص المحدثة */}
+        {/* مجالات التخصص - الخدمات النشطة حالياً فقط، مرتبة حسب الأولوية */}
         <section style={{ marginBottom: '35px' }}>
           <h2 className="main-heading" style={{ color: 'var(--primary-color)', margin: '0 0 25px 0', fontSize: '1.6rem' }}>
             {t('services_title')}
           </h2>
           <div>
-            <ServiceCard title={t('service2_title')} description={t('service2_desc')} />
-            <ServiceCard title={t('service1_title')} description={t('service1_desc')} />
-            <ServiceCard title={t('service3_title')} description={t('service3_desc')} />
-            {/* عرض الخدمة الرابعة الخاصة بالمصريين والتمثيل القضائي العام */}
-            {t('service4_title') && <ServiceCard title={t('service4_title')} description={t('service4_desc')} />}
+            {/* 3. الجنائي */}
+            <ServiceCard
+              title={t('service3_title')}
+              description={t('service3_desc')}
+              articlesUrl="/articles-criminal.html"
+            />
+            {/* 2. الأحوال الشخصية */}
+            <ServiceCard
+              title={t('service2_title')}
+              description={t('service2_desc')}
+              articlesUrl="/articles-personal-status.html"
+            />
+            {/* 1. تأسيس الشركات */}
+            <ServiceCard
+              title={t('service1_title')}
+              description={t('service1_desc')}
+              articlesUrl="/articles-companies.html"
+            />
+
+            {/*
+              خدمات مؤجلة مؤقتًا (زواج الأجانب - تسجيل الملكيات العقارية):
+              النصوص بتاعتها لسه محفوظة في ملف الترجمة (locales) تحت مفاتيح
+              _deferred_marriage_title/_desc و _deferred_realestate_title/_desc.
+              لما تجهزوا محتوى ليها، رجعوا استخدموها هنا بنفس شكل الكارت اللي فوق.
+            */}
           </div>
         </section>
 
-       {/* كارت الاتصال لـ ميزان - تم قصر التواصل على الواتساب فقط */}
+       {/* كارت الاتصال */}
         <section style={{ 
           background: 'linear-gradient(135deg, #1c2541 0%, #0b1329 100%)', 
           color: 'white', 
@@ -96,7 +113,6 @@ function App() {
           </p>
           
           <div style={{ display: 'flex', justifyContent: 'center' }}>
-            {/* زر الواتساب الفردي والأساسي للتواصل */}
             <a 
               href="https://wa.me/201288070525" 
               target="_blank" 

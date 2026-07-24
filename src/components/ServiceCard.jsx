@@ -1,8 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-function ServiceCard({ title, description }) {
-  const { i18n } = useTranslation();
+// أضفنا خاصية اختيارية جديدة اسمها articlesUrl
+// لو موجودة، هيظهر زرار "مقالات ذات صلة" تحت وصف الخدمة يودي لصفحة المقالات بتاعت التخصص ده
+function ServiceCard({ title, description, articlesUrl }) {
+  const { i18n, t } = useTranslation();
   
   // التحقق مما إذا كانت اللغة الحالية هي العربية لضبط الاتجاه
   const isRtl = i18n.language === 'ar';
@@ -39,6 +41,26 @@ function ServiceCard({ title, description }) {
       }}>
         {description}
       </p>
+
+      {/* زرار المقالات - يظهر فقط لو تم تمرير رابط للقسم ده */}
+      {/* بيفتح في نفس التاب (من غير target="_blank") عشان زرار الرجوع في المتصفح يشتغل طبيعي */}
+      {articlesUrl && (
+        <a
+          href={articlesUrl}
+          style={{
+            display: 'inline-block',
+            marginTop: '16px',
+            color: 'var(--primary-color)',
+            fontWeight: 'bold',
+            fontSize: '0.95rem',
+            textDecoration: 'none',
+            borderBottom: '2px solid var(--accent-color)',
+            paddingBottom: '2px'
+          }}
+        >
+          📚 {isRtl ? 'مقالات ذات صلة' : 'Related Articles'}
+        </a>
+      )}
     </div>
   );
 }
