@@ -68,11 +68,11 @@ function App() {
             {t('services_title')}
           </h2>
           <div>
-            {/* 3. الجنائي */}
+            {/* 1. تأسيس الشركات */}
             <ServiceCard
-              title={t('service3_title')}
-              description={t('service3_desc')}
-              articlesUrl="/articles-criminal.html"
+              title={t('service1_title')}
+              description={t('service1_desc')}
+              articlesUrl="/articles-companies.html"
             />
             {/* 2. الأحوال الشخصية */}
             <ServiceCard
@@ -80,11 +80,17 @@ function App() {
               description={t('service2_desc')}
               articlesUrl="/articles-personal-status.html"
             />
-            {/* 1. تأسيس الشركات */}
+            {/* 3. الجنائي */}
             <ServiceCard
-              title={t('service1_title')}
-              description={t('service1_desc')}
-              articlesUrl="/articles-companies.html"
+              title={t('service3_title')}
+              description={t('service3_desc')}
+              articlesUrl="/articles-criminal.html"
+            />
+            {/* 4. القضايا المدنية */}
+            <ServiceCard
+              title={t('service4_title')}
+              description={t('service4_desc')}
+              articlesUrl="/articles-civil.html"
             />
 
             {/*
